@@ -92,5 +92,22 @@ namespace week14_SortingAlgorithms
             return -1;
         }
 
+        static List<int> LinearSearchEvery1500th (List<int> numList)
+        {
+            List<int> aList = new List<int>();
+            var sTime = DateTime.Now;
+
+            for( int i=1; i< aList.Count; i++)
+            {
+                if((i%1500)== 0)
+                {
+                    aList.Add(numList[i]);
+                }
+            }
+            var eTime = DateTime.Now;
+            var timeLS = (sTime - eTime).TotalMilliseconds;
+            return aList;
+        }
+
     }
 }
